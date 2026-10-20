@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc"],
+  "jsPlugins": ["./lint/plugin.js"],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "typescript/no-floating-promises": "error",
+    "typescript/no-explicit-any": "error",
+    "typescript/consistent-type-imports": "error",
+    "typescript/consistent-type-definitions": ["error", "type"],
+    "import/no-cycle": "error",
+    "complexity": ["error", 10],
+    "max-lines-per-function": [
+      "error",
+      { "max": 40, "skipBlankLines": true, "skipComments": true }
+    ],
+    "max-depth": ["error", 3],
+    "max-params": ["error", 3],
+    "max-nested-callbacks": ["error", 3],
+    "no-constant-condition": "error",
+    "no-continue": "error",
+    "no-negated-condition": "error",
+    "id-length": ["error", { "min": 2, "exceptions": ["_"] }],
+    "local/no-inline-param-object-types": "error",
+    "local/single-object-param": "error",
+    "local/no-array-mutation": "error"
+  },
+  "env": {
+    "builtin": true
+  },
+  "options": {
+    "typeAware": true
+  }
+}

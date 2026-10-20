@@ -1,0 +1,7 @@
+allowBuilds:
+  "@google/genai": false
+  protobufjs: false
+permissions:
+  build:
+    build: true
+    skills: true
